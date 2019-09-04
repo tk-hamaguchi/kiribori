@@ -1,0 +1,19 @@
+require:
+  - rubocop-performance
+  - rubocop-rspec
+
+AllCops:
+  TargetRubyVersion: 2.6
+  Exclude:
+    - 'vendor/bundle/**/*'
+    - 'node_modules/**/*'
+    - 'bin/bundle'
+    - 'templates/**/*'
+    - 'config/**/*'
+
+Bundler/OrderedGems:
+  Enabled: false
+
+Metrics/LineLength:
+  Exclude:
+    - '*.gemspec'
