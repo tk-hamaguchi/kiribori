@@ -1,0 +1,19 @@
+name: Ruby
+
+on: [push]
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+
+    container:
+      image: ruby:2.6.4
+
+    steps:
+      - uses: actions/checkout@v1
+      - run: gem install bundler --no-document
+      - run: bundle install --jobs 4 --retry 3 --deployment
+      - run: bundle exec rubocop -c .rubocop.yml -D
+      - run: bundle exec cucumber features/ -fd
+      - run: bundle exec rspec spec/ -fd

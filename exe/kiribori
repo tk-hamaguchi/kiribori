@@ -2,3 +2,10 @@
 # frozen_string_literal: true
 
 require 'kiribori'
+
+begin
+  STDOUT.print Kiribori::CLI.execute!(ARGV)
+rescue StandardError => e
+  STDERR.print e.message
+  exit -1
+end

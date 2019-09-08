@@ -1,0 +1,9 @@
+templates:
+  all:
+    - rails_base
+    - mysql_docker
+    - config
+    - dotenv
+    - haml-rails
+    - simple_form
+    - rspec
