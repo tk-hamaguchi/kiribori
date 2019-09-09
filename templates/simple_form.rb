@@ -1,7 +1,7 @@
-# frozen_string_literal: true
+# Kiribori Template for SimpleForm
 
 gem 'simple_form'
 
-Open3.capture3('bundle install')
+run_bundle
 
 generate 'simple_form:install', '--bootstrap'

@@ -33,7 +33,7 @@ class Kiribori::CLI
       if options[:all]
         @config[:templates][:all]
       else
-        options[:templates]
+        options[:templates].split ','
       end
     end
   end

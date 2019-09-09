@@ -12,6 +12,7 @@ class Kiribori::CLI
     def parse(argv)
       opt = ::OptionParser.new
       opt.on('-a', '--all') { |v| v }
+      opt.on('-t', '--templates=VAL') { |v| v }
       opt.parse!(argv, into: options)
     end
   end

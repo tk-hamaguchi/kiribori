@@ -1,8 +1,4 @@
-# frozen_string_literal: true
-
-def source_paths
-  [Rails.root]
-end
+# Kiribori Template for RSpec
 
 gem_group :development, :test do
   gem 'rspec-rails', '~> 3.8'
@@ -11,7 +7,7 @@ gem_group :development, :test do
   gem 'rspec_junit_formatter'
 end
 
-run 'bundle install'
+run_bundle
 
 generate 'rspec:install'
 
