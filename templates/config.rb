@@ -3,12 +3,17 @@ context = <<EOM
   * 各種設定情報を一元管理するために `config` を追加
 EOM
 
+## Add gems
+
 gem 'config'
 
-run_bundle
-bundle_command 'exec spring stop'
+bundle_command 'install --quiet'
+bundle_command 'exec rubocop -c .rubocop.yml -D --auto-correct --only "Layout/TrailingBlankLines"'
+
+## Configuration for config
 
 generate 'config:install'
+
 
 git add: %w[
   .gitignore

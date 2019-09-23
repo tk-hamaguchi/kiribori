@@ -1,5 +1,30 @@
 # 錐彫(Kiribori)
 
+
+```shell
+kiribori-server
+```
+```shell
+gem install bundler rails --no-document
+rails new kiribori_sample \
+    --database=mysql \
+    --skip-action-mailbox \
+    --skip-test --skip-system-test \
+    --skip-action-text \
+    --skip-active-storage \
+    --skip-action-cable \
+    --webpack=vue
+cd kiribori_sample
+git init
+git add .
+git commit -m 'kiribori_sample'
+bundle exec rails app:template LOCATION='http://localhost:9292'
+```
+
+
+---
+
+
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/kiribori`. To experiment with that code, run `bin/console` for an interactive prompt.
 
 TODO: Delete this and the text above, and describe your gem

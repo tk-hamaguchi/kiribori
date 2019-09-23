@@ -32,7 +32,7 @@ comment_lines   'Gemfile', /gem 'tzinfo-data'/
 ## Add rails-i18n to Gemfile
 gem 'rails-i18n'
 
-run_bundle
+bundle_command 'install --quiet'
 
 gsub_file 'config/environments/production.rb', /^(\s*config\.i18n\.fallbacks =)\s*.*$/, '\1 [I18n.default_locale]'
 

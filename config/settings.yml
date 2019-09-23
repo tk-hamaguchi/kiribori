@@ -2,8 +2,18 @@ templates:
   all:
     - rails_base
     - mysql_docker
+    - rubocop
     - config
     - dotenv
     - haml-rails
     - simple_form
     - rspec
+    - cucumber
+    - factory_bot
+    - annotate
+    - devise
+    - acts_as_paranoid
+    - kaminari
+    - pundit
+    - bootstrap4
+    - datatable

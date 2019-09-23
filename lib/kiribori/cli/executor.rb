@@ -17,6 +17,7 @@ class Kiribori::CLI
 
     def template_prefix
       <<~TEMPLATE
+        # encoding: UTF-8
         # frozen_string_literal: true
 
         def source_paths
@@ -26,6 +27,9 @@ class Kiribori::CLI
         def app_class
           app_name.camelize.constantize.const_get(:Application)
         end
+
+        ENV['DISABLE_SPRING'] = '1'
+        ENV['BUNDLE_IGNORE_MESSAGES'] = '1'
       TEMPLATE
     end
 
