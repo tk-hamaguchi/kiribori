@@ -22,9 +22,8 @@ create_file 'spec/factories/faker.rb', <<'EOS'
 require 'faker'
 
 FactoryBot.define do
-  sequence :user_email do |n|
-    "#{Faker::Internet.username}#{n}@#{Faker::Internet.domain_name}"
-  end
+  sequence(:username) { Faker::Internet.username }
+  sequence(:domain)   { Faker::Internet.domain_name }
 end
 EOS
 

@@ -154,25 +154,28 @@ insert_into_file 'app/models/user.rb', "\n  ### methods\n\n", before: /^end$/
 
 
 gsub_file 'spec/models/user_spec.rb', /^.*pending.*$/, <<CODE
-  it { is_expected.to validate_presence_of(:username) }
-  it { is_expected.to validate_length_of(:username).is_at_least(2).is_at_most(40) }
 
-  it { is_expected.to validate_presence_of(:email) }
-  it { is_expected.to validate_uniqueness_of(:email).case_insensitive }
+  context 'validations' do
+    it { is_expected.to validate_presence_of(:username) }
+    it { is_expected.to validate_length_of(:username).is_at_least(2).is_at_most(40) }
 
-  it { is_expected.to validate_presence_of(:password) }
-  it { is_expected.to validate_confirmation_of(:password) }
-  it { is_expected.to validate_length_of(:password).is_at_least(8).is_at_most(120) }
+    it { is_expected.to validate_presence_of(:email) }
+    it { is_expected.to validate_uniqueness_of(:email).case_insensitive }
+
+    it { is_expected.to validate_presence_of(:password) }
+    it { is_expected.to validate_confirmation_of(:password) }
+    it { is_expected.to validate_length_of(:password).is_at_least(8).is_at_most(120) }
+  end
 CODE
 
 insert_into_file 'spec/factories/users.rb', <<CODE.rstrip, after: "factory :user do\n"
-    username { Faker::Japanese::Name.name }
+    username { Faker::Internet.username }
     email    { Faker::Internet.email }
     password { 'P@ssw0rd' }
 CODE
 
 gsub_file 'app/models/user.rb', /(:registerable,)/, '\1 :timeoutable,'
-
+ 
 
 ### Add routing
 
