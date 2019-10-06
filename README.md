@@ -1,5 +1,8 @@
 # 錐彫(Kiribori)
 
+[![codecov](https://codecov.io/gh/tk-hamaguchi/kiribori/branch/master/graph/badge.svg)](https://codecov.io/gh/tk-hamaguchi/kiribori)
+
+
 Railsテンプレートを取捨選択しながら生成するテンプレートジェネレータ
 
 
