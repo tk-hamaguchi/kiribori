@@ -13,3 +13,5 @@
 .idea
 *.swp
 **/*.gem
+coverage
+.DS_Store

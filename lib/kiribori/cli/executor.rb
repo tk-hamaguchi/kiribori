@@ -36,8 +36,10 @@ class Kiribori::CLI
     def select_templates
       if options[:all]
         @config[:templates][:all]
-      else
+      elsif options[:templates]
         options[:templates].split ','
+      else
+        @config[:templates][:default]
       end
     end
   end

@@ -1,5 +1,18 @@
 # 錐彫(Kiribori)
 
+Railsテンプレートを取捨選択しながら生成するテンプレートジェネレータ
+
+
+## インストール
+
+```shell
+gem install kiribori
+```
+
+
+## 使い方
+
+### 
 
 ```shell
 kiribori-server

@@ -2,6 +2,9 @@
 
 require 'optparse'
 require 'yaml'
+require 'json'
+require 'forwardable'
+require 'logger'
 
 # 錐彫の基底モジュール
 #
@@ -19,9 +22,14 @@ module Kiribori
   #
   class Error < StandardError; end
 
-  autoload :CLI, 'kiribori/cli'
-  autoload :SettingsParser, 'kiribori/settings_parser'
-  autoload :TemplateParser, 'kiribori/template_parser'
+  autoload :CLI,             'kiribori/cli'
+  autoload :Server,          'kiribori/server'
+  autoload :Option,          'kiribori/option'
+  autoload :Logger,          'kiribori/logger'
+  autoload :RackApp,         'kiribori/rack_app'
+  autoload :SettingsParser,  'kiribori/settings_parser'
+  autoload :TemplateBuilder, 'kiribori/template_builder'
+  autoload :TemplateParser,  'kiribori/template_parser'
 end
 
 require 'kiribori/version'

@@ -10,8 +10,11 @@ gem 'rubocop-junit-formatter'
 gem 'rubocop-rspec'
 gem 'rubocop-performance'
 
+gem 'simplecov'
+
 gem 'cucumber'
 gem 'aruba'
+gem 'capybara'
 
 # Specify your gem's dependencies in kiribori.gemspec
 gemspec
