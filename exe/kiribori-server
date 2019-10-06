@@ -4,6 +4,4 @@
 require 'rack'
 require 'fileutils'
 
-FileUtils.cd(File.expand_path('../', __dir__)) do |dir|
-  Rack::Server.start
-end
+FileUtils.cd(File.expand_path('../', __dir__)) { Rack::Server.start }
