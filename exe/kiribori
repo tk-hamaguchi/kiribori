@@ -3,6 +3,20 @@
 
 require 'kiribori'
 
+if ENV['COVERAGE'] || ENV['CI'] || ENV['CODECOV_TOKEN']
+  require 'simplecov'
+  SimpleCov.start do
+    add_filter 'features'
+    add_filter 'spec'
+  end
+  SimpleCov.command_name "binary[#{Process.pid}]"
+  SimpleCov.root(File.expand_path('..', __dir__))
+  if ENV['CODECOV_TOKEN']
+    require 'codecov'
+    SimpleCov.formatter = SimpleCov::Formatter::Codecov
+  end
+end
+
 begin
   STDOUT.print Kiribori::CLI.execute!(ARGV)
 rescue StandardError => e

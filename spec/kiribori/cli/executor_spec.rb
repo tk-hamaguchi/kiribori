@@ -35,6 +35,7 @@ RSpec.describe Kiribori::CLI::Executor do
 
     it do
       expect(exec_template_prefix).to eq <<~TEMPLATE
+        # encoding: UTF-8
         # frozen_string_literal: true
 
         def source_paths
@@ -44,6 +45,9 @@ RSpec.describe Kiribori::CLI::Executor do
         def app_class
           app_name.camelize.constantize.const_get(:Application)
         end
+
+        ENV['DISABLE_SPRING'] = '1'
+        ENV['BUNDLE_IGNORE_MESSAGES'] = '1'
       TEMPLATE
     end
   end

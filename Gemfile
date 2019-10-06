@@ -11,6 +11,7 @@ gem 'rubocop-rspec'
 gem 'rubocop-performance'
 
 gem 'simplecov'
+gem 'codecov', require: false
 
 gem 'cucumber'
 gem 'aruba'
