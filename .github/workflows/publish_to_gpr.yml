@@ -1,10 +1,12 @@
-name: Ruby
+name: Publish gem to GitHub Public Registry
 
-on: [push]
-
+on:
+  release:
+    types:
+      - published
 jobs:
 
-  build_test_and_push:
+  push:
     runs-on: ubuntu-latest
 
     container:
@@ -12,16 +14,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-      - run: gem install bundler --no-document
-      - run: bundle install --jobs 4 --retry 3 --deployment
-      - run: bundle exec rubocop -c .rubocop.yml -D
-      - run: bundle exec cucumber features/ -fpretty
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-      - run: bundle exec rspec spec/ -fd
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-
       - name: Publish to GPR
         run: |
           gem install keycutter --no-document

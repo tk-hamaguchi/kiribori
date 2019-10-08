@@ -45,23 +45,22 @@ gsub_file 'spec/models/group_spec.rb', /^.*pending.*$/, <<CODE
       context 'class' do
         subject { described_class }
 
-        it { is_expected.to respond.to :with_deleted }
-        it { is_expected.to respond.to :only_deleted }
+        it { is_expected.to respond_to :with_deleted }
+        it { is_expected.to respond_to :only_deleted }
       end
-      
+
       context 'instance' do
         subject { described_instance }
 
-        it { is_expected.to respond.to :deleted? }
-        it { is_expected.to respond.to :recover }
+        it { is_expected.to respond_to :deleted? }
+        it { is_expected.to respond_to :recover }
       end
     end
   end
 CODE
 
-insert_into_file 'spec/factories/groups.rb', <<CODE, after: "factory :group do\n"
-    name { Faker::Pokemon.location }
-CODE
+insert_into_file 'spec/factories/faker.rb', "  sequence(:group_name) { Faker::Games::Pokemon.location }\n", before: /^end$/
+gsub_file 'spec/factories/groups.rb', /(\n  factory :group do\n).+(\n  end)/m, '\1name { generate :group_name }\2'
 
 
 ## Add logic to User model
@@ -80,6 +79,10 @@ insert_into_file 'app/models/user.rb', <<CODE, after: /^  ### methods$/
   end
 CODE
 
+insert_into_file 'spec/models/user_spec.rb', <<CODE, after: /^RSpec.describe User, type: :model do$/
+  subject(:described_instance) { FactoryBot.build :user }
+
+CODE
 
 ## Apply to DB
 
@@ -127,6 +130,8 @@ CODE
 prepend_to_file 'app/decorators/my/user_decorator.rb', "# My::UserDecorator\n"
 insert_into_file 'spec/decorators/my/user_decorator_spec.rb', "  pending\n", before: /^end$/
 
+gsub_file 'spec/controllers/my/users_controller_spec.rb', /(\nRSpec.describe My::UsersController, type: :controller do\n).+(\nend)/m, '\1\2'
+
 
 ## Add authenticate for User
 
@@ -141,7 +146,7 @@ prepend_to_file 'app/datatables/user_datatable.rb', "# UserDatatable\n"
 insert_into_file 'app/datatables/user_datatable.rb', "\n    Pundit.policy_scope(current_user, User)", after: /^  def get_raw_records$/
 
 inject_into_class 'app/datatables/user_datatable.rb', 'UserDatatable', <<CODE
-  
+
   def current_user
     @current_user ||= options[:current_user]
   end
