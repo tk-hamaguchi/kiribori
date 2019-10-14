@@ -9,25 +9,31 @@
     """
   ならば "標準エラー出力"に何も表示されていない
   かつ "標準出力"に下記のテンプレートが表示されている:
-    |   テンプレート   | 含まれているか |
-    | RailsBase        |       ○       |
-    | MySQL Docker     |       ○       |
-    | rubocop          |       ○       |
-    | Config           |       ○       |
-    | Dotenv           |       ○       |
-    | HAML             |       ○       |
-    | SimpleForm       |       ○       |
-    | RSpec            |       ○       |
-    | cucumber         |       ○       |
-    | factory_bot      |       ○       |
-    | annotate         |       ○       |
-    | devise           |       ○       |
-    | acts_as_paranoid |       ○       |
-    | kaminari         |       ○       |
-    | pundit           |       ○       |
-    | bootstrap4       |       ○       |
-    | datatable        |       ○       |
-    | app_scaffold     |       ×       |
+    |    テンプレート    | 含まれているか |
+    | RailsBase          |       ○       |
+    | MySQL Docker       |       ○       |
+    | rubocop            |       ○       |
+    | Config             |       ○       |
+    | Dotenv             |       ○       |
+    | Redis store        |       ○       |
+    | HAML               |       ○       |
+    | SimpleForm         |       ○       |
+    | RSpec              |       ○       |
+    | cucumber           |       ○       |
+    | factory_bot        |       ○       |
+    | annotate           |       ○       |
+    | reek               |       ○       |
+    | devise             |       ○       |
+    | acts_as_paranoid   |       ○       |
+    | kaminari           |       ○       |
+    | pundit             |       ○       |
+    | bootstrap4         |       ○       |
+    | datatable          |       ○       |
+    | RailsBestPractices |       ○       |
+    | ERD                |       ○       |
+    | docker             |       ○       |
+    | CircleCI           |       ×       |
+    | app_scaffold       |       ×       |
 
 
 シナリオ: テンプレートを指定したビルド
@@ -37,25 +43,31 @@
     """
   ならば "標準エラー出力"に何も表示されていない
   かつ "標準出力"に下記のテンプレートが表示されている:
-    |   テンプレート   | 含まれているか |
-    | RailsBase        |       ○       |
-    | MySQL Docker     |       ○       |
-    | rubocop          |       ×       |
-    | Config           |       ×       |
-    | Dotenv           |       ×       |
-    | HAML             |       ×       |
-    | SimpleForm       |       ×       |
-    | RSpec            |       ×       |
-    | cucumber         |       ×       |
-    | factory_bot      |       ×       |
-    | annotate         |       ×       |
-    | devise           |       ×       |
-    | acts_as_paranoid |       ×       |
-    | kaminari         |       ×       |
-    | pundit           |       ×       |
-    | bootstrap4       |       ×       |
-    | datatable        |       ×       |
-    | app_scaffold     |       ×       |
+    |    テンプレート    | 含まれているか |
+    | RailsBase          |       ○       |
+    | MySQL Docker       |       ○       |
+    | rubocop            |       ×       |
+    | Config             |       ×       |
+    | Dotenv             |       ×       |
+    | Redis store        |       ×       |
+    | HAML               |       ×       |
+    | SimpleForm         |       ×       |
+    | RSpec              |       ×       |
+    | cucumber           |       ×       |
+    | factory_bot        |       ×       |
+    | annotate           |       ×       |
+    | reek               |       ×       |
+    | devise             |       ×       |
+    | acts_as_paranoid   |       ×       |
+    | kaminari           |       ×       |
+    | pundit             |       ×       |
+    | bootstrap4         |       ×       |
+    | datatable          |       ×       |
+    | RailsBestPractices |       ×       |
+    | ERD                |       ×       |
+    | docker             |       ×       |
+    | CircleCI           |       ×       |
+    | app_scaffold       |       ×       |
 
 
 シナリオ: 全てのテンプレートを使ったビルド
@@ -65,22 +77,28 @@
     """
   ならば "標準エラー出力"に何も表示されていない
   かつ "標準出力"に下記のテンプレートが表示されている:
-    |   テンプレート   | 含まれているか |
-    | RailsBase        |       ○       |
-    | MySQL Docker     |       ○       |
-    | rubocop          |       ○       |
-    | Config           |       ○       |
-    | Dotenv           |       ○       |
-    | HAML             |       ○       |
-    | SimpleForm       |       ○       |
-    | RSpec            |       ○       |
-    | cucumber         |       ○       |
-    | factory_bot      |       ○       |
-    | annotate         |       ○       |
-    | devise           |       ○       |
-    | acts_as_paranoid |       ○       |
-    | kaminari         |       ○       |
-    | pundit           |       ○       |
-    | bootstrap4       |       ○       |
-    | datatable        |       ○       |
-    | app_scaffold     |       ○       |
+    |    テンプレート    | 含まれているか |
+    | RailsBase          |       ○       |
+    | MySQL Docker       |       ○       |
+    | rubocop            |       ○       |
+    | Config             |       ○       |
+    | Dotenv             |       ○       |
+    | Redis store        |       ○       |
+    | HAML               |       ○       |
+    | SimpleForm         |       ○       |
+    | RSpec              |       ○       |
+    | cucumber           |       ○       |
+    | factory_bot        |       ○       |
+    | annotate           |       ○       |
+    | reek               |       ○       |
+    | devise             |       ○       |
+    | acts_as_paranoid   |       ○       |
+    | kaminari           |       ○       |
+    | pundit             |       ○       |
+    | bootstrap4         |       ○       |
+    | datatable          |       ○       |
+    | RailsBestPractices |       ○       |
+    | ERD                |       ○       |
+    | docker             |       ○       |
+    | CircleCI           |       ○       |
+    | app_scaffold       |       ○       |

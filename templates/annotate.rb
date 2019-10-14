@@ -17,7 +17,7 @@ bundle_command 'install --quiet'
 generate 'annotate:install'
 
 
-bundle_command 'exec rubocop -c .rubocop.yml -D --auto-correct --only "Style/FrozenStringLiteralComment,Layout/AlignHash,Style/BracesAroundHashParameters,Style/TrailingCommaInHashLiteral"'
+bundle_command 'exec rubocop -c .rubocop.yml -D --auto-correct --only "Style/FrozenStringLiteralComment,Layout/AlignHash,Style/BracesAroundHashParameters,Style/TrailingCommaInHashLiteral,Style/StringLiterals"'
 
 
 git add: %w[

@@ -5,22 +5,28 @@ templates:
     - rubocop
     - config
     - dotenv
+    - redis_store
     - haml-rails
     - simple_form
     - rspec
     - cucumber
     - factory_bot
     - annotate
+    - reek
     - devise
     - acts_as_paranoid
     - kaminari
     - pundit
     - bootstrap4
     - datatable
+    - rails_best_practices
+    - erd
+    - docker
 
   all:
     - rails_base
     - mysql_docker
+    - redis_store
     - rubocop
     - config
     - dotenv
@@ -30,10 +36,15 @@ templates:
     - cucumber
     - factory_bot
     - annotate
+    - reek
     - devise
     - acts_as_paranoid
     - kaminari
     - pundit
     - bootstrap4
     - datatable
+    - rails_best_practices
+    - erd
+    - docker
+    - circleci
     - app_scaffold

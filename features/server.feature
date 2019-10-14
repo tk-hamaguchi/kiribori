@@ -10,25 +10,31 @@
   ならば ステータスコード"200"が返る
   かつ Content-Typeが"application/x-thor-template"である
   かつ レスポンスボディに下記のテンプレートが表示されている:
-    |   テンプレート   | 含まれているか |
-    | RailsBase        |       ○       |
-    | MySQL Docker     |       ○       |
-    | rubocop          |       ○       |
-    | Config           |       ○       |
-    | Dotenv           |       ○       |
-    | HAML             |       ○       |
-    | SimpleForm       |       ○       |
-    | RSpec            |       ○       |
-    | cucumber         |       ○       |
-    | factory_bot      |       ○       |
-    | annotate         |       ○       |
-    | devise           |       ○       |
-    | acts_as_paranoid |       ○       |
-    | kaminari         |       ○       |
-    | pundit           |       ○       |
-    | bootstrap4       |       ○       |
-    | datatable        |       ○       |
-    | app_scaffold     |       ×       |
+    |    テンプレート    | 含まれているか |
+    | RailsBase          |       ○       |
+    | MySQL Docker       |       ○       |
+    | rubocop            |       ○       |
+    | Config             |       ○       |
+    | Dotenv             |       ○       |
+    | Redis store        |       ○       |
+    | HAML               |       ○       |
+    | SimpleForm         |       ○       |
+    | RSpec              |       ○       |
+    | cucumber           |       ○       |
+    | factory_bot        |       ○       |
+    | annotate           |       ○       |
+    | reek               |       ○       |
+    | devise             |       ○       |
+    | acts_as_paranoid   |       ○       |
+    | kaminari           |       ○       |
+    | pundit             |       ○       |
+    | bootstrap4         |       ○       |
+    | datatable          |       ○       |
+    | RailsBestPractices |       ○       |
+    | ERD                |       ○       |
+    | docker             |       ○       |
+    | CircleCI           |       ×       |
+    | app_scaffold       |       ×       |
 
 
 シナリオ: テンプレートを指定したビルド
@@ -39,25 +45,31 @@
   ならば ステータスコード"200"が返る
   かつ Content-Typeが"application/x-thor-template"である
   かつ レスポンスボディに下記のテンプレートが表示されている:
-    |   テンプレート   | 含まれているか |
-    | RailsBase        |       ○       |
-    | MySQL Docker     |       ○       |
-    | rubocop          |       ×       |
-    | Config           |       ×       |
-    | Dotenv           |       ×       |
-    | HAML             |       ×       |
-    | SimpleForm       |       ×       |
-    | RSpec            |       ×       |
-    | cucumber         |       ×       |
-    | factory_bot      |       ×       |
-    | annotate         |       ×       |
-    | devise           |       ×       |
-    | acts_as_paranoid |       ×       |
-    | kaminari         |       ×       |
-    | pundit           |       ×       |
-    | bootstrap4       |       ×       |
-    | datatable        |       ×       |
-    | app_scaffold     |       ×       |
+    |    テンプレート    | 含まれているか |
+    | RailsBase          |       ○       |
+    | MySQL Docker       |       ○       |
+    | rubocop            |       ×       |
+    | Config             |       ×       |
+    | Dotenv             |       ×       |
+    | Redis store        |       ×       |
+    | HAML               |       ×       |
+    | SimpleForm         |       ×       |
+    | RSpec              |       ×       |
+    | cucumber           |       ×       |
+    | factory_bot        |       ×       |
+    | annotate           |       ×       |
+    | reek               |       ×       |
+    | devise             |       ×       |
+    | acts_as_paranoid   |       ×       |
+    | kaminari           |       ×       |
+    | pundit             |       ×       |
+    | bootstrap4         |       ×       |
+    | datatable          |       ×       |
+    | RailsBestPractices |       ×       |
+    | ERD                |       ×       |
+    | docker             |       ×       |
+    | CircleCI           |       ×       |
+    | app_scaffold       |       ×       |
 
 
 シナリオ: テンプレートを除外したビルド
@@ -68,25 +80,31 @@
   ならば ステータスコード"200"が返る
   かつ Content-Typeが"application/x-thor-template"である
   かつ レスポンスボディに下記のテンプレートが表示されている:
-    |   テンプレート   | 含まれているか |
-    | RailsBase        |       ○       |
-    | MySQL Docker     |       ○       |
-    | rubocop          |       ○       |
-    | Config           |       ○       |
-    | Dotenv           |       ○       |
-    | HAML             |       ○       |
-    | SimpleForm       |       ○       |
-    | RSpec            |       ○       |
-    | cucumber         |       ○       |
-    | factory_bot      |       ○       |
-    | annotate         |       ○       |
-    | devise           |       ○       |
-    | acts_as_paranoid |       ○       |
-    | kaminari         |       ○       |
-    | pundit           |       ○       |
-    | bootstrap4       |       ×       |
-    | datatable        |       ×       |
-    | app_scaffold     |       ×       |
+    |    テンプレート    | 含まれているか |
+    | RailsBase          |       ○       |
+    | MySQL Docker       |       ○       |
+    | rubocop            |       ○       |
+    | Config             |       ○       |
+    | Dotenv             |       ○       |
+    | Redis store        |       ○       |
+    | HAML               |       ○       |
+    | SimpleForm         |       ○       |
+    | RSpec              |       ○       |
+    | cucumber           |       ○       |
+    | factory_bot        |       ○       |
+    | annotate           |       ○       |
+    | reek               |       ○       |
+    | devise             |       ○       |
+    | acts_as_paranoid   |       ○       |
+    | kaminari           |       ○       |
+    | pundit             |       ○       |
+    | bootstrap4         |       ×       |
+    | datatable          |       ×       |
+    | RailsBestPractices |       ○       |
+    | ERD                |       ○       |
+    | docker             |       ○       |
+    | CircleCI           |       ×       |
+    | app_scaffold       |       ×       |
 
 
 シナリオ: 全てのテンプレートを使ったビルド
@@ -97,25 +115,31 @@
   ならば ステータスコード"200"が返る
   かつ Content-Typeが"application/x-thor-template"である
   かつ レスポンスボディに下記のテンプレートが表示されている:
-    |   テンプレート   | 含まれているか |
-    | RailsBase        |       ○       |
-    | MySQL Docker     |       ○       |
-    | rubocop          |       ○       |
-    | Config           |       ○       |
-    | Dotenv           |       ○       |
-    | HAML             |       ○       |
-    | SimpleForm       |       ○       |
-    | RSpec            |       ○       |
-    | cucumber         |       ○       |
-    | factory_bot      |       ○       |
-    | annotate         |       ○       |
-    | devise           |       ○       |
-    | acts_as_paranoid |       ○       |
-    | kaminari         |       ○       |
-    | pundit           |       ○       |
-    | bootstrap4       |       ○       |
-    | datatable        |       ○       |
-    | app_scaffold     |       ○       |
+    |    テンプレート    | 含まれているか |
+    | RailsBase          |       ○       |
+    | MySQL Docker       |       ○       |
+    | rubocop            |       ○       |
+    | Config             |       ○       |
+    | Dotenv             |       ○       |
+    | Redis store        |       ○       |
+    | HAML               |       ○       |
+    | SimpleForm         |       ○       |
+    | RSpec              |       ○       |
+    | cucumber           |       ○       |
+    | factory_bot        |       ○       |
+    | annotate           |       ○       |
+    | reek               |       ○       |
+    | devise             |       ○       |
+    | acts_as_paranoid   |       ○       |
+    | kaminari           |       ○       |
+    | pundit             |       ○       |
+    | bootstrap4         |       ○       |
+    | datatable          |       ○       |
+    | RailsBestPractices |       ○       |
+    | ERD                |       ○       |
+    | docker             |       ○       |
+    | CircleCI           |       ○       |
+    | app_scaffold       |       ○       |
 
 
 シナリオ: 存在しないテンプレートを指定したビルド

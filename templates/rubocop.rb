@@ -105,7 +105,7 @@ prepend_to_file 'app/mailers/application_mailer.rb', "# ApplicationMailer\n"
 prepend_to_file 'app/models/application_record.rb', "# ApplicationRecord\n"
 
 bundle_command 'exec rubocop -c .rubocop.yml -D --auto-correct --only "Style/FrozenStringLiteralComment,Style/SymbolArray"'
-
+bundle_command 'exec rubocop -c .rubocop.yml -D --auto-correct --only "Layout/TrailingWhitespace" config/environments/test.rb'
 
 git add: %w[
   Gemfile
@@ -118,6 +118,7 @@ git add: %w[
   app/mailers/application_mailer.rb
   app/models/application_record.rb
   config.ru
+  config/environments/test.rb
   db/seeds.rb
 ].join(' ')
 

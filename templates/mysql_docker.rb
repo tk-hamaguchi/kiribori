@@ -29,7 +29,7 @@ end
 
 append_to_file 'docker-compose.development.yml', <<"EOT"
   db:
-    image: mysql:8.0.17
+    image: mysql:5.7
     ports:
       - "3306:3306"
     environment:
