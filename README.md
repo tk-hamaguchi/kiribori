@@ -46,6 +46,7 @@ bundle exec rails app:template LOCATION='../template.rb'
 ## デフォルトで適用されるテンプレート
 
 |    テンプレート    |    テンプレート名    | テンプレートの差分 |
+|:-------------------|:--------------------:|:--------------------:|
 | RailsBase          | rails_base           | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/a0327bbfc5b5ae34bff7f2f26aac926fee889c0b) |
 | MySQL Docker       | mysql_docker         | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/75d33e53f2ace0b6eca1e6ce2a935d3e708edbe3) |
 | rubocop            | rubocop              | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/8e3f0117f7e196671f51731dfd566c622283328a) |
