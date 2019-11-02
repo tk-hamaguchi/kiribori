@@ -5,6 +5,8 @@ templates:
     - rubocop
     - config
     - dotenv
+    - sentry
+    - datadog
     - redis_store
     - haml-rails
     - simple_form
@@ -22,14 +24,17 @@ templates:
     - rails_best_practices
     - erd
     - docker
+    - nginx
 
   all:
     - rails_base
     - mysql_docker
-    - redis_store
     - rubocop
     - config
     - dotenv
+    - sentry
+    - datadog
+    - redis_store
     - haml-rails
     - simple_form
     - rspec
@@ -46,5 +51,6 @@ templates:
     - rails_best_practices
     - erd
     - docker
+    - nginx
     - circleci
     - app_scaffold

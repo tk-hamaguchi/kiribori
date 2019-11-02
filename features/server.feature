@@ -16,6 +16,8 @@
     | rubocop            |       ○       |
     | Config             |       ○       |
     | Dotenv             |       ○       |
+    | sentry             |       ○       |
+    | datadog            |       ○       |
     | Redis store        |       ○       |
     | HAML               |       ○       |
     | SimpleForm         |       ○       |
@@ -33,6 +35,7 @@
     | RailsBestPractices |       ○       |
     | ERD                |       ○       |
     | docker             |       ○       |
+    | nginx              |       ○       |
     | CircleCI           |       ×       |
     | app_scaffold       |       ×       |
 
@@ -51,6 +54,8 @@
     | rubocop            |       ×       |
     | Config             |       ×       |
     | Dotenv             |       ×       |
+    | sentry             |       ×       |
+    | datadog            |       ×       |
     | Redis store        |       ×       |
     | HAML               |       ×       |
     | SimpleForm         |       ×       |
@@ -68,6 +73,7 @@
     | RailsBestPractices |       ×       |
     | ERD                |       ×       |
     | docker             |       ×       |
+    | nginx              |       ×       |
     | CircleCI           |       ×       |
     | app_scaffold       |       ×       |
 
@@ -86,6 +92,8 @@
     | rubocop            |       ○       |
     | Config             |       ○       |
     | Dotenv             |       ○       |
+    | sentry             |       ○       |
+    | datadog            |       ○       |
     | Redis store        |       ○       |
     | HAML               |       ○       |
     | SimpleForm         |       ○       |
@@ -103,6 +111,7 @@
     | RailsBestPractices |       ○       |
     | ERD                |       ○       |
     | docker             |       ○       |
+    | nginx              |       ○       |
     | CircleCI           |       ×       |
     | app_scaffold       |       ×       |
 
@@ -121,6 +130,8 @@
     | rubocop            |       ○       |
     | Config             |       ○       |
     | Dotenv             |       ○       |
+    | sentry             |       ○       |
+    | datadog            |       ○       |
     | Redis store        |       ○       |
     | HAML               |       ○       |
     | SimpleForm         |       ○       |
@@ -138,6 +149,7 @@
     | RailsBestPractices |       ○       |
     | ERD                |       ○       |
     | docker             |       ○       |
+    | nginx              |       ○       |
     | CircleCI           |       ○       |
     | app_scaffold       |       ○       |
 

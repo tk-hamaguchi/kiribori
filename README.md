@@ -47,28 +47,31 @@ bundle exec rails app:template LOCATION='../template.rb'
 
 |    テンプレート    |    テンプレート名    | テンプレートの差分 |
 |:-------------------|:--------------------:|:--------------------:|
-| RailsBase          | rails_base           | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/a0327bbfc5b5ae34bff7f2f26aac926fee889c0b) |
-| MySQL Docker       | mysql_docker         | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/75d33e53f2ace0b6eca1e6ce2a935d3e708edbe3) |
-| rubocop            | rubocop              | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/8e3f0117f7e196671f51731dfd566c622283328a) |
-| Config             | config               | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/8567af744b35269412f5179b648375658776d89a) |
-| Dotenv             | dotenv               | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/4e1ab9ba378b16a7200971fd2b373a80fc40fd06) |
-| Redis store        | redis_store          | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/dac3844ea90a1a99783623a63ddb2c1271df9cae) |
-| HAML               | haml-rails           | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/b8020aa98ae974cbb3649eeebdcc765cd3db3cac) |
-| SimpleForm         | simple_form          | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/8abfd1f40d539725c69ab0e933738eb87f4be052) |
-| RSpec              | rspec                | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/85aaa48d83ccc2ffebcb41162c818c387554d85f) |
-| cucumber           | cucumber             | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/c5f25ae27fd84f390dbb0410724f92d3ef9f7906) |
-| factory_bot        | factory_bot          | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/e4623ad63a683db8a67942f0c1c24a8b34e67ff9) |
-| annotate           | annotate             | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/7d20260c59590928845cc28f738c45c512f886df) |
-| reek               | reek                 | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/66107c4f9ce21f9c498f44e87becde3a21c75d0c) |
-| devise             | devise               | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/76be7fef8978b0ad26976768a80fe6207fb03ca3) |
-| acts_as_paranoid   | acts_as_paranoid     | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/a9fddc5dbc4af50d3afdc78ada66512912b58371) |
-| kaminari           | kaminari             | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/7cd1e91fa458b3b93369e0ef782eb107990b924e) |
-| pundit             | pundit               | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/f94795320a12997080d51a767e176823cb401851) |
-| bootstrap4         | bootstrap4           | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/ceb8215a63711d487bc27fce8e761ba03ed2b227) |
-| datatable          | datatable            | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/fd6881929cf69473cf61f12e6c97a3eb71e227b4) |
-| RailsBestPractices | rails_best_practices | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/8fe224f0eb3f0304d491da203a96ce44af21fc9e) |
-| ERD                | erd                  | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/198f61b2e2f9bea831c0c3c9c67aa653fe7528e1) |
-| docker             | docker               | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/b6f9fe4ca59a179a347a68593cdc9eac949e456b) |
+| RailsBase          | rails_base           | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/85362ffeff6170bba2184ca1e6049291f4b43e4e) |
+| MySQL Docker       | mysql_docker         | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/5188eb2e97e6de8004fb300d910df2fb40ca4a72) |
+| rubocop            | rubocop              | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/acd0e39dee8fdc576b693e007bc0889e6ad95718) |
+| Config             | config               | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/7dc13928cd435da783a3c84192850e75f34b5534) |
+| Dotenv             | dotenv               | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/ff7da7d2b3ac3a41038ffc127246570393c9bf98) |
+| Sentry             | sentry               | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/9dc29a1b24e9b99f70911d85160381fd336e0ba3) |
+| DataDog            | datadog              | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/d1f7eb922694ba7c46bfbb49adb7c0b360d829db) |
+| Redis store        | redis_store          | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/124c18e75d72e8601f46301e6d6e1b9a60103bf0) |
+| HAML               | haml-rails           | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/e3cbb78e3ef7a788de31d4d72028a3db85419deb) |
+| SimpleForm         | simple_form          | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/b19b208218a69659e739d89f05529c9368eb2ade) |
+| RSpec              | rspec                | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/8e0fb3be9f4edca682c3b1b8163d5b08c9acce34) |
+| cucumber           | cucumber             | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/b3aea773455e823b521ef3235e5b0d4093613f31) |
+| factory_bot        | factory_bot          | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/6932907f9ad9b93829085629c1cca9cc4def7196) |
+| annotate           | annotate             | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/d26a71bef1ca42e26b37a708390e6e764933c74d) |
+| reek               | reek                 | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/5d861e6bd3a0b0af81a0027cc4be3043845abdc2) |
+| devise             | devise               | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/3c0175f5c2bcd4ab3cf9ace9906691a3d96a40f7) |
+| acts_as_paranoid   | acts_as_paranoid     | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/b5b17341fc0648d8fc32afca17fcb5acfa9d3077) |
+| kaminari           | kaminari             | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/f267b27ac6c5948fdaa660b53ea4363eb68183c4) |
+| pundit             | pundit               | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/e2c3c9345057e37bf44eaf9d8bd909a8a0fa1b3c) |
+| bootstrap4         | bootstrap4           | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/f2d494c3ee92934d565432aef237894ecb704080) |
+| datatable          | datatable            | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/e5d8b0bc4751e20d28a2695cf19cf085c5cb30ff) |
+| RailsBestPractices | rails_best_practices | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/9ce79a6213bc7322ad4f0432d4544d55de53d2fd) |
+| ERD                | erd                  | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/12fb0d7040f6d42f1682cf16abc905dd46fb40f9) |
+| docker             | docker               | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/3b81ddb1616d6cc681504887e2a0c04a13bc1db7) |
+| Nginx Docker       | nginx                | [diff](https://github.com/tk-hamaguchi/kiribori_sample/commit/85e89ac04039186c8a2f8d9773ff895ff727f9fc) |
 
 
 ## GETTING STARTED 

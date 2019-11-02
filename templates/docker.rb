@@ -159,8 +159,7 @@ insert_into_file 'docker-compose.yml', <<EOT, after: /^services:$/
       - redis
     environment:
       DATABASE_URL:        mysql2://root:mysql123@db:3306/#{app_name}?encoding=utf8mb4&prepared_statements=true
-      REDIS_URL_FOR_CACHE: redis://redis:6379/1
-      REDIS_URL:           redis://redis:6379/2
+      REDIS_URL:           redis://redis:6379/1
     tmpfs:
       - /var/rails/tmp
 EOT

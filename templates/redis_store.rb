@@ -1,7 +1,6 @@
 # Kiribori Template for Redis store
 context = <<EOM
-  * キャッシュストアとしてRedisを設定
-  * セッションストアとしてキャッシュストアを設定
+  * セッションストアとしてRedisを設定
 EOM
 
 ## Add gems
@@ -23,18 +22,34 @@ append_to_file 'docker-compose.development.yml', <<CODE
 CODE
 
 append_to_file '.env', <<EOT
-REDIS_URL_FOR_CACHE=redis://127.0.0.1:6379/1
-REDIS_URL=redis://127.0.0.1:6379/2
+REDIS_URL=redis://127.0.0.1:6379/1
 EOT
 
 append_to_file '.env.example', <<EOT
-REDIS_URL_FOR_CACHE=redis://127.0.0.1:6379/1
-REDIS_URL=redis://127.0.0.1:6379/2
+REDIS_URL=redis://127.0.0.1:6379/1
 EOT
 
-gsub_file 'config/environments/production.rb', /^\s+(?:#\s*)?config.cache_store\s+=\s+.*$/, <<'CODE'.rstrip
-  config.cache_store = :redis_cache_store, { url: ENV['REDIS_URL_FOR_CACHE'] }
-  config.session_store :cache_store
+create_file 'config/initializers/session_store.rb', <<'CODE'.strip
+Rails.application.config.session_store(
+  :cache_store,
+  {
+    cache:        ActiveSupport::Cache.lookup_store(
+                    :redis_cache_store,
+                    {
+                      url:           ENV['REDIS_URL'],  
+                      error_handler: -> (method:, returning:, exception:) {
+                        Raven.capture_exception(
+                          exception,
+                          level: 'warning',
+                          tags:  { method: method, returning: returning }
+                        )
+                      }
+                    }
+                  ),
+    expire_after: 24 * 60 * 60,
+    secure:       Rails.env.production?
+  }
+)
 CODE
 
 git add: %w[
@@ -42,7 +57,7 @@ git add: %w[
   Gemfile.lock
   .env.example
   docker-compose.development.yml
-  config/environments/production.rb
+  config/initializers/session_store.rb
 ].join(' ')
 
-git commit: "-m 'Apply pundit template by Kiribori.\n#{context}'"
+git commit: "-m 'Apply redis_store template by Kiribori.\n#{context}'"
