@@ -20,7 +20,7 @@ RSpec.describe Kiribori::CLI::Executor do
   let(:all_templates) { instance_double(Array) }
   let(:config) { { templates: { all: all_templates } } }
 
-  context '#select_templates' do
+  describe '#select_templates' do
     subject(:exec_select_templates) { described_instance.select_templates }
 
     context 'with options[:all]' do
@@ -30,7 +30,7 @@ RSpec.describe Kiribori::CLI::Executor do
     end
   end
 
-  context '#template_prefix' do
+  describe '#template_prefix' do
     subject(:exec_template_prefix) { described_instance.template_prefix }
 
     it do

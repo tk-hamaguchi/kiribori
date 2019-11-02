@@ -31,25 +31,25 @@ CODE
 gsub_file 'spec/models/group_spec.rb', /^.*pending.*$/, <<CODE
   subject(:described_instance) { FactoryBot.build :group }
 
-  context 'associations' do
+  describe 'associations' do
     it { is_expected.to have_many(:users).dependent(:destroy) }
   end
 
-  context 'validations' do
+  describe 'validations' do
     it { is_expected.to validate_presence_of(:name) }
     it { is_expected.to validate_length_of(:name).is_at_least(2).is_at_most(40) }
   end
 
-  context 'mix-in' do
-    context 'acts_as_paranoid' do
-      context 'class' do
+  describe 'mix-in' do
+    describe 'acts_as_paranoid' do
+      describe 'class' do
         subject { described_class }
 
         it { is_expected.to respond_to :with_deleted }
         it { is_expected.to respond_to :only_deleted }
       end
 
-      context 'instance' do
+      describe 'instance' do
         subject { described_instance }
 
         it { is_expected.to respond_to :deleted? }
